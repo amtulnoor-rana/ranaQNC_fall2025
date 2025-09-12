@@ -67,4 +67,16 @@ print(f"Likelihood for X=5: {L2:.8e}")
 print(f"Total likelihood:   {L_total:.8e}")
 print(f"Total log-likelihood: {logL_total:.8f}")
 
+#EXERCISE 4
+counts = {0:0,1:0,2:3,3:7,4:10,5:19,6:26,7:16,8:16,9:5,10:5,11:0,12:0,13:0,14:0}
+n = 14
+
+total_experiments = sum(counts.values())
+total_releases = sum(k * c for k, c in counts.items())
+
+p_hat = total_releases / (n * total_experiments)
+print(f"Total experiments: {total_experiments}")
+print(f"Total releases: {total_releases}")
+print(f"p-hat = {p_hat:.2f}")
+
 
